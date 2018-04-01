@@ -1,11 +1,18 @@
 import Koa from 'koa'
 import serveStatic from 'koa-static'
+import Chalk from 'chalk'
 import Home from './routes/home'
 
 export const app = new Koa()
 
-app.use(serveStatic(`${__dirname}/public`))
+const port = 3000
 
+// serve static app
+app.use(serveStatic(`${__dirname}/public/blog-front`))
+
+// serve api
 app.use(Home.routes(), Home.allowedMethods())
 
-app.listen(3000)
+app.listen(port, () => {
+    Chalk.green(console.log(`Server Started ∹ http://localhost:${port}`));
+})
