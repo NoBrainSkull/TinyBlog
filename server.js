@@ -8,7 +8,7 @@ export const app = new Koa()
 const port = 3000
 
 // serve static app
-app.use(serveStatic(`${__dirname}/public/blog-front`))
+app.use(serveStatic(`${__dirname}/public/`))
 
 // serve api
 app.use(Home.routes(), Home.allowedMethods())
