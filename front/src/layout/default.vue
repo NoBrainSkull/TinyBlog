@@ -1,5 +1,6 @@
 <template>
   <v-container id="header">
+    <top-menu/>
     <v-content>
       <slot></slot>
     </v-content>

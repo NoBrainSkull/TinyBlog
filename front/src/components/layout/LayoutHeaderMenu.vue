@@ -2,27 +2,20 @@
   <v-toolbar app flat>
     <h1><a href="#">Future Imperfect</a></h1>
     <nav class="links">
-      <ul>
-      <a href="#">Lorem</a>
-      <a href="#">Ipsum</a>
-      <a href="#">Feugiat</a>
-      <a href="#">Tempus</a>
-      <a href="#">Adipiscing</a></ul>
+      <v-btn flat>Lorem</v-btn>
+      <v-btn flat>Ipsum</v-btn>
+      <v-btn flat>Feugiat</v-btn>
+      <v-btn flat>Tempus</v-btn>
+      <v-btn flat>Adipiscing</v-btn>
     </nav>
-    <nav class="main">
-      <ul>
-        <li class="search">
-          <a class="fa-search" href="#search">Search</a>
-          <form id="search" method="get" action="#">
-            <input type="text" name="query" placeholder="Search" />
-          </form>
-        </li>
-        <li class="menu">
-          <a class="fa-bars" href="#menu">Menu</a>
-        </li>
-      </ul>
-    </nav>
+    <v-spacer></v-spacer>
+    <v-icon class="mr-5">search</v-icon>
   </v-toolbar>
 </template>
 
-<script>export default {}</script>
+<script>
+  export default {}
+</script>
+
+<style>
+</style>
