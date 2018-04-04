@@ -6,7 +6,7 @@
         <slot></slot>
       </v-content>
     </div>
-    <v-footer :fixed="fixed" app>
+    <v-footer app>
       <span>&copy; 2017</span>
     </v-footer>
   </v-container>
@@ -18,3 +18,6 @@
 
   export default { components: { TopMenu, PostsList } }
 </script>
+
+<style>
+</style>

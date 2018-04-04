@@ -10,7 +10,6 @@
   import Layout from './layout/default'
 
   export default {
-    data() {},
     components: { Layout }
   }
 </script>
