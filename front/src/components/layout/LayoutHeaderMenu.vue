@@ -2,10 +2,11 @@
   <v-toolbar class="topbar" app flat>
     <h1 class="body-2"><a href="#">{{ homeButton }}</a></h1>
     <nav class="links pt-2">
-      <v-btn v-for="item in menuItems" v-bind:key="item" flat class="slim">{{ item }}</v-btn>
+      <v-btn v-show="isDesktop" v-for="item in menuItems" v-bind:key="item" flat class="slim">{{ item }}</v-btn>
     </nav>
     <v-spacer></v-spacer>
-    <v-icon class="mr-5">search</v-icon>
+    <v-icon class="mr-4">search</v-icon>
+    <v-icon v-show="isMobile" class="mr-4">view_headline</v-icon>
   </v-toolbar>
 </template>
 
@@ -15,6 +16,14 @@
       return {
         homeButton: 'Future Imperfect',
         menuItems : ['Lorem', 'Ipsum', 'Feugiat', 'tempus', 'adipiscing']
+      }
+    },
+    computed: {
+      isMobile() {
+        return ['xs', 'sm'].includes(this.$vuetify.breakpoint.name)
+      },
+      isDesktop() {
+        return !(this.isMobile)
       }
     }
   }
