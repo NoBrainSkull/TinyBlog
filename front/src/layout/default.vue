@@ -42,4 +42,9 @@
 </script>
 
 <style>
+  .raleway{
+    font-family: 'Raleway', 'sans-serif'
+  }
+
+  .bold { font-weight: bold }
 </style>
