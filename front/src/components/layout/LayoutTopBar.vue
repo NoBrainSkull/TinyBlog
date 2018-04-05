@@ -1,0 +1,91 @@
+<template>
+  <v-container>
+    <v-toolbar class="topbar" app flat>
+      <h1 class="body-2" @click.stop="$emit('HomeAction')">{{ title }}</h1>
+      <nav class="links pt-2">
+        <slot name="top-bar-menu"></slot>
+      </nav>
+      <v-spacer></v-spacer>
+      <slot name="top-bar-actions"></slot>
+      <v-btn v-show="isMobile" flat icon @click.stop="rightMenu = !rightMenu"><v-icon>view_headline</v-icon></v-btn>
+    </v-toolbar>
+    <right-menu :title="'Future Imperfect'" :open="rightMenu" @close="rightMenu = false" />
+  </v-container>
+</template>
+
+<script>
+  import RightMenu from './LayoutRightMenu'
+  export default {
+    data() {
+      return {
+        rightMenu: false
+      }
+    },
+    props: {
+      title: {
+        type: String,
+        default: 'Define me!'
+      },
+      enableRightPanel: {
+        type: Boolean,
+        default: true
+      }
+    },
+    computed: {
+      isMobile() {
+        return ['xs', 'sm'].includes(this.$vuetify.breakpoint.name)
+      },
+    },
+    methods: {
+      defaultSearchCTA() {
+        this.$emit('search-btn-clicked')
+      },
+      defaultMenuCTA() {
+        //open menu as a right side panel
+      }
+    },
+    components: { RightMenu }
+  }
+</script>
+
+<style scoped>
+  .topbar {
+    background: #fefefe!important;
+    border: solid 1px rgba(160, 160, 160, 0.3);
+  }
+
+  .links {
+    border-left: solid 1px rgba(160, 160, 160, 0.3);
+    height: inherit;
+    margin-left: 1.5em;
+    overflow: hidden;
+    padding-left: 1.5em;
+  }
+
+  .links .slim {
+    border-left: solid 1px rgba(160, 160, 160, 0.3);
+    line-height: 1;
+    margin-left: 1em;
+    padding-left: 1em;
+  }
+  
+  .links .slim:first-child {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .topbar a, .topbar h1 {
+    text-decoration: none!important;
+    color: black;
+    font-family: Raleway, Helvetica, sans-serif!important;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+  }
+
+  .slim {
+    letter-spacing: 0.25em;
+    font-weight: 100;
+  }
+</style>
