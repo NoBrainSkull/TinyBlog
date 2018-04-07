@@ -26,7 +26,18 @@
       </v-card-text>
       <v-card-actions class="actions">
         <post-actions>
-          <v-btn flat outline large class="button big raleway">Continue Reading</v-btn>
+          <v-btn slot="leftAction" flat outline large class="button raleway">Continue Reading</v-btn>
+          <v-btn flat class="raleway">{{ tag }}</v-btn>
+          <div class="separator mr-3"></div>
+          <v-btn flat icon color="blue-grey lighten-3" class="stat-btn raleway">
+            <v-icon size="12px" class="mr-2">favorite</v-icon>
+            <span class="blue-grey--text text--darken-4 mr-3">{{ likes }}</span>
+          </v-btn>
+          <div class="separator mr-3"></div>
+          <v-btn flat icon color="blue-grey lighten-3" class="stat-btn raleway">
+            <v-icon size="12px" class="mr-2">question_answer</v-icon>
+            <span class="blue-grey--text text--darken-4">{{ comments }}</span>
+          </v-btn>
         </post-actions>
       </v-card-actions>
     </v-layout>
@@ -88,6 +99,18 @@
 
   .actions {
     width: 100%;
+  }
+
+  .separator {
+    border-right: dotted 1px rgba(160, 160, 160, 0.8);
+    width: 1px;
+    height: 12px;
+  }
+
+  .button {
+    border: solid 1px rgba(160, 160, 160, 0.5);
+    font-weight: 600;
+    font-size: 0.9em;
   }
   
 </style>
