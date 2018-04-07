@@ -27,7 +27,7 @@
       <v-card-actions class="actions">
         <post-actions>
           <v-btn slot="leftAction" flat outline large class="button raleway">Continue Reading</v-btn>
-          <v-btn flat class="raleway">{{ tag }}</v-btn>
+          <v-btn small flat class="raleway">{{ tag }}</v-btn>
           <div class="separator mr-3"></div>
           <v-btn flat icon color="blue-grey lighten-3" class="stat-btn raleway">
             <v-icon size="12px" class="mr-2">favorite</v-icon>
@@ -111,6 +111,7 @@
     border: solid 1px rgba(160, 160, 160, 0.5);
     font-weight: 600;
     font-size: 0.9em;
+    width: 20em;
   }
   
 </style>

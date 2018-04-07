@@ -14,7 +14,7 @@
       <v-flex xs12>
         <v-layout row align-center justify-center><slot name="leftAction"/></v-layout>
       </v-flex>
-      <v-flex xs12 class="mt-3">
+      <v-flex xs12>
         <v-layout row align-center justify-center>
           <slot></slot>
         </v-layout>
@@ -37,9 +37,3 @@
     }
   }
 </script>
-
-<style scoped>
-  .stat-btn {
-    border-left: dotted 1px rgba(160, 160, 160, 0.3);
-  }
-</style>
