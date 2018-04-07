@@ -47,4 +47,17 @@
   }
 
   .bold { font-weight: bold }
+
+  .display-1{
+    font-family: 'Raleway', 'sans-serif';
+    font-weight: bold;
+    font-size: 1.5em!important;
+    letter-spacing: 0.25em!important;
+  }
+
+  .subheading{
+    letter-spacing: 0.25em!important;
+    font-size: 0.6em!important;
+    text-transform: uppercase;
+  }
 </style>

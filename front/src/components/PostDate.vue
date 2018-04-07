@@ -18,8 +18,8 @@
         </v-layout>
         <v-layout v-else row wrap align-center justify-center class="text-xs-center subheading">
           <v-flex xs12 class="mb-3"><v-avatar :size="64"><img :src="avatar" alt=""></v-avatar></v-flex>
-          <time class="published pr-4 bold" datetime="2015-10-22">{{ date2Str(created_at) }}</time>
-          <a href="#" class="author pl-4"><span class="name">{{ author }}</span><img src="images/avatar.jpg" alt="" /></a>
+          <time class="published pr-2 bold" datetime="2015-10-22">{{ date2Str(created_at) }}</time>
+          <a href="#" class="author pl-2 ml-1"><span class="name">{{ author }}</span><img src="images/avatar.jpg" alt="" /></a>
         </v-layout>
       </v-container>
     </v-layout>
