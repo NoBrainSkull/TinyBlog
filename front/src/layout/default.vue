@@ -9,22 +9,23 @@
       </div>
     </top-bar>
     <title-bloc v-if="isMobile"/>
-    <container>
+    <v-container>
       <v-layout row wrap align-start justify-center>
         <v-flex class="mt-5" v-if="isDesktop" md12></v-flex>
         <v-flex v-if="isDesktop" md3>
           <v-layout row wrap align-start justify-center>
             <v-flex xs12><title-bloc/></v-flex>
-            <v-flex xs9 class="h-separator mt-5"></v-flex>
+            <v-flex xs11 class="h-separator mt-5"></v-flex>
+            <v-flex xs12><recommendations /></v-flex>            
           </v-layout>
         </v-flex>
-        <v-flex xs12 sm11 md8 offset-xs-1>
+        <v-flex xs12 sm11 md8 offset-xs1>
           <v-content>
             <slot></slot>
           </v-content>
         </v-flex>
       </v-layout>
-    </container>
+    </v-container>
     <v-footer app>
       <span>&copy; {{ new Date().getUTCFullYear() }}</span>
     </v-footer>
@@ -35,9 +36,10 @@
 	import DeviceAware from '~/mixins/device-aware'
   import TitleBloc from "~/components/layout/LayoutTitle"
   import TopBar from "~/components/layout/LayoutTopBar"
+  import Recommendations from "~/components/layout/LayoutRecommendedPosts"
 
   export default { 
-    components: { TopBar, TitleBloc },
+    components: { TopBar, TitleBloc, Recommendations },
     mixins: [DeviceAware],
     data () {
       return {
