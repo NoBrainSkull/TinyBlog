@@ -1,5 +1,5 @@
 <template>
-  <v-container id="header">
+  <v-container id="header" class="px-0 mx-0">
     <top-bar :title="'Future Imperfect'">
       <div slot="top-bar-menu">
         <v-btn v-show="isDesktop" v-for="item in menuItems" v-bind:key="item" flat class="slim">{{ item }}</v-btn>
@@ -9,7 +9,7 @@
       </div>
     </top-bar>
     <title-bloc v-if="isMobile"/>
-    <v-container>
+    <v-container class="px-0 mx-0">
       <v-layout row wrap align-start justify-center>
         <v-flex class="mt-5" v-if="isDesktop" md12></v-flex>
         <v-flex v-if="isDesktop" md3>
@@ -23,7 +23,7 @@
             <rights />
           </v-layout>
         </v-flex>
-        <v-flex xs12 sm11 md8 offset-xs1>
+        <v-flex xs12 sm12 md8 offset-md1>
           <v-content>
             <slot></slot>
           </v-content>
@@ -66,6 +66,11 @@
 </script>
 
 <style>
+  .application.theme--light {
+    background-color: #fafbfd!important;
+    -webkit-text-size-adjust: none!important;
+  }
+
   .raleway{
     font-family: 'Raleway', 'sans-serif'
   }
@@ -78,6 +83,16 @@
     font-size: 3em!important;
     letter-spacing: 0.15em!important;
     text-transform: uppercase;
+    color: #3c3b3b!important;
+  }
+
+  .display-2{
+    font-family: 'Raleway', 'sans-serif';
+    font-weight: bold;
+    font-size: 2.5em!important;
+    letter-spacing: 0.15em!important;
+    text-transform: uppercase;
+    color: #3c3b3b!important;
   }
 
   .display-1{
@@ -85,23 +100,31 @@
     font-weight: bold;
     font-size: 1.5em!important;
     letter-spacing: 0.25em!important;
+    color: #3c3b3b!important;
   }
+
   .headline {
     letter-spacing: 0.25em!important;
     font-size: 1em!important;
     text-transform: uppercase;
+    color: #646464!important;
+    font-weight: 400!important;
+    line-height: 2.5!important;
   }
 
   .title {
     text-transform: uppercase;
     font-family: 'Raleway';
     font-size: 1em!important;
+    color: #3c3b3b!important;
   }
 
   .subheading{
     letter-spacing: 0.25em!important;
     font-size: 0.6em!important;
     text-transform: uppercase;
+    color: #646464!important;
+    font-weight: 400!important;
   }
 
   .v-separator {
@@ -156,6 +179,7 @@
     letter-spacing: 0.25em!important;
     font-weight: 600;
     font-size: 0.9em;
+    color: #3c3b3b!important;
     width: 20em;
     height: 4.5em;
   }

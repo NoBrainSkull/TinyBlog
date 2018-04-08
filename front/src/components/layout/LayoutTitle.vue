@@ -1,8 +1,8 @@
 <template>
-	<v-container class="mt-5">
+	<v-container class="mt-3 mb-0 pb-0">
 		<v-layout row wrap align-center justify-center :text-xs-center="isMobile">
-			<v-flex xs12 class="mb-4"><v-avatar size="75em"><img :src="avatar" /></v-avatar></v-flex>
-			<v-flex xs12 class="mb-3 py-4"><h1 class="display-3">Future imperfect</h1></v-flex>
+			<v-flex xs12 class="mb-3"><v-avatar size="75em"><img :src="avatar" /></v-avatar></v-flex>
+			<v-flex xs12 class="pt-4 pb-4"><h1 class="display-2">Future imperfect</h1></v-flex>
 			<v-flex xs12><h1 class="headline">Another fine responsive site template by HTML5 UP</h1></v-flex>
 		</v-layout>
 	</v-container>
