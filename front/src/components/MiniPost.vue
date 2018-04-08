@@ -1,7 +1,7 @@
 <template>
   <article>
     <header>
-      <v-card flat color="white" class="mini-post mt-5">
+      <v-card hover flat color="white" class="mini-post mt-5">
         <v-layout row wrap align-center justify-center>
           <img src="https://cdna.artstation.com/p/assets/images/images/008/221/338/large/nabetse-zitro-v-n.jpg?1511283613" alt="" />
           <v-flex xs10 class="mt-3 px-3 py-3">

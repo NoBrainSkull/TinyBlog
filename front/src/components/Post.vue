@@ -1,5 +1,5 @@
 <template>
-  <v-card hover flat tile class="post">
+  <v-card flat tile class="post">
     <v-layout row wrap>
       <v-card-title class="post-header title px-0 py-0">
         <v-layout row wrap>
