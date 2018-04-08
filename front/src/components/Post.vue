@@ -33,7 +33,7 @@
           <div class="v-separator"></div>
           <v-btn flat small color="blue-grey lighten-3" class="stat-btn raleway">
             <v-icon size="12px" class="mr-2">favorite</v-icon>
-            <span class="blue-grey--text text--darken-4 mr-3">{{ likes }}</span>
+            <span class="blue-grey--text text--darken-4">{{ likes }}</span>
           </v-btn>
           <div class="v-separator"></div>
           <v-btn flat small color="blue-grey lighten-3" class="stat-btn raleway">
