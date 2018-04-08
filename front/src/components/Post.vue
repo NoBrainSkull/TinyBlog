@@ -22,13 +22,13 @@
             <div style=".image">
               <img class="mb-5" :src="illustration" />
             </div>
-            <p>{{ text }}</p>
+            <p class="body-2">{{ text }}</p>
           </v-layout>
         </v-container>
       </v-card-text>
-      <v-card-actions class="actions">
+      <v-card-actions class="actions mb-5">
         <post-actions>
-          <v-btn slot="leftAction" flat outline large class="button raleway">Continue Reading</v-btn>
+          <v-btn slot="leftAction" flat outline large class="big-button raleway mb-3">Continue Reading</v-btn>
           <v-btn small flat class="raleway">{{ tag }}</v-btn>
           <div class="v-separator"></div>
           <v-btn flat small color="blue-grey lighten-3" class="stat-btn raleway">
@@ -102,13 +102,6 @@
 
   .actions {
     width: 100%;
-  }
-
-  .button {
-    border: solid 1px rgba(160, 160, 160, 0.5);
-    font-weight: 600;
-    font-size: 0.9em;
-    width: 20em;
   }
   
 </style>

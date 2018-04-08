@@ -27,6 +27,7 @@
           <v-content>
             <slot></slot>
           </v-content>
+          <bottom-actions />
         </v-flex>
       </v-layout>
     </v-container>
@@ -43,9 +44,10 @@
   import About from "~/components/layout/LayoutAbout"
   import Recommendations from "~/components/layout/LayoutRecommendedPosts"
   import Rights from "~/components/layout/LayoutFooter"
+  import BottomActions from "~/components/layout/LayoutBottomActions"
 
   export default { 
-    components: { TopBar, TitleBloc, Recommendations, About, Rights },
+    components: { TopBar, TitleBloc, Recommendations, About, Rights, BottomActions },
     mixins: [DeviceAware],
     data () {
       return {
@@ -123,6 +125,11 @@
     font-family: "Source Sans Pro", "Helvetica", "sans-serif";
   }
 
+  .body-2 {
+    font-size: 1.1em!important;
+    color: #646464;
+  }
+
   .image {
     max-width:100%;
     overflow: hidden;
@@ -142,5 +149,14 @@
     border-bottom: dotted 1px rgba(160, 160, 160, 0.65);
     color: inherit;
     text-decoration: none;
+  }
+
+  .big-button {
+    border: solid 1px rgba(160, 160, 160, 0.3)!important;
+    letter-spacing: 0.25em!important;
+    font-weight: 600;
+    font-size: 0.9em;
+    width: 20em;
+    height: 4.5em;
   }
 </style>

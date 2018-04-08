@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-toolbar class="topbar" app flat>
-      <h1 class="body-2" @click.stop="$emit('HomeAction')">{{ title }}</h1>
+      <h1 class="body-1" @click.stop="$emit('HomeAction')">{{ title }}</h1>
       <nav class="links pt-2">
         <slot name="top-bar-menu"></slot>
       </nav>
