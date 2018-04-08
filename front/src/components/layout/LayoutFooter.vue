@@ -6,7 +6,7 @@
     <v-icon small>fa-instagram></v-icon>
     <v-icon small>fa-rss></v-icon>
     <v-icon small>fa-lock></v-icon>
-    <p class="copyright">&copy; RAVEN. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+    <p class="copyright">&copy; RAVEN. Design inspired from <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
   </section>
 </template>
 

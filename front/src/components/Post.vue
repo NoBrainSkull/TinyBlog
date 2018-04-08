@@ -7,7 +7,7 @@
             <v-container class="titlebox my-0 px-5 pt-5 text-xs-center text-md-left">
               <v-layout row wrap>
                 <v-flex xs12><h2 class="display-1">{{ title }}</h2></v-flex>
-                <v-flex xs12><p class="subheading">{{ subtitle }}</p></v-flex>
+                <v-flex xs12><p class="subheading mt-4">{{ subtitle }}</p></v-flex>
               </v-layout>
             </v-container>
           </v-flex>

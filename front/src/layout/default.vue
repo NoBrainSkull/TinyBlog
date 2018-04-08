@@ -136,7 +136,7 @@
 
   .subheading{
     letter-spacing: 0.25em!important;
-    font-size: 0.6em!important;
+    font-size: 0.9em!important;
     text-transform: uppercase;
     color: #646464!important;
     font-weight: 400!important;
