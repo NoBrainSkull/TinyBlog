@@ -11,8 +11,12 @@
     <title-bloc v-if="isMobile"/>
     <container>
       <v-layout row wrap align-start justify-center>
+        <v-flex class="mt-5" v-if="isDesktop" md12></v-flex>
         <v-flex v-if="isDesktop" md3>
-          <title-bloc/>
+          <v-layout row wrap align-start justify-center>
+            <v-flex xs12><title-bloc/></v-flex>
+            <v-flex xs9 class="h-separator mt-5"></v-flex>
+          </v-layout>
         </v-flex>
         <v-flex xs12 sm11 md8 offset-xs-1>
           <v-content>
@@ -82,5 +86,22 @@
     letter-spacing: 0.25em!important;
     font-size: 0.6em!important;
     text-transform: uppercase;
+  }
+
+  .v-separator {
+    border-right: dotted 1px rgba(160, 160, 160, 0.8);
+    width: 1px;
+    height: 12px;
+  }
+
+  .h-separator {
+    border-bottom: solid 1px rgba(160, 160, 160, 0.4);
+    width: 100%;
+    height: 1px;
+  }
+
+  .h-spacer {
+    width: 100%;
+    height: 1px;
   }
 </style>

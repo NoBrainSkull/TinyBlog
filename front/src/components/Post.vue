@@ -19,7 +19,7 @@
       <v-card-text>
         <v-container>
           <v-layout row wrap>
-            <a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+            <img class="mb-5" :src="illustration" />
             <p>{{ text }}</p>
           </v-layout>
         </v-container>
@@ -28,12 +28,12 @@
         <post-actions>
           <v-btn slot="leftAction" flat outline large class="button raleway">Continue Reading</v-btn>
           <v-btn small flat class="raleway">{{ tag }}</v-btn>
-          <div class="separator"></div>
+          <div class="v-separator"></div>
           <v-btn flat small color="blue-grey lighten-3" class="stat-btn raleway">
             <v-icon size="12px" class="mr-2">favorite</v-icon>
             <span class="blue-grey--text text--darken-4 mr-3">{{ likes }}</span>
           </v-btn>
-          <div class="separator"></div>
+          <div class="v-separator"></div>
           <v-btn flat small color="blue-grey lighten-3" class="stat-btn raleway">
             <v-icon size="12px" class="mr-2">question_answer</v-icon>
             <span class="blue-grey--text text--darken-4">{{ comments }}</span>
@@ -59,7 +59,8 @@
         text: 'Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Cras vehicula tellus eu ligula viverra, ac fringilla turpis suscipit. Quisque vestibulum rhoncus ligula.',
         tag: 'general',
         likes: 28,
-        comments: 52
+        comments: 52,
+        illustration: 'https://cdna.artstation.com/p/assets/images/images/008/221/338/large/nabetse-zitro-v-n.jpg?1511283613'
       }
     },
     methods: {
@@ -99,12 +100,6 @@
 
   .actions {
     width: 100%;
-  }
-
-  .separator {
-    border-right: dotted 1px rgba(160, 160, 160, 0.8);
-    width: 1px;
-    height: 12px;
   }
 
   .button {
