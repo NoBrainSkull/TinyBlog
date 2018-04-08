@@ -1,6 +1,6 @@
 <template>
     <v-layout row wrap>
-      <v-container class="mt-0 mb-5 pb-0 px-5">
+      <v-container class="mt-0 pb-0 px-5">
         <v-layout v-if="isDesktop" column align-center justify-end class="max-width text-xs-right pt-4">
           <v-flex xs12 class="max-width title mr-4"><time datetime="2015-10-22">{{ date2Str(created_at) }}</time></v-flex>
           <v-flex xs12 class="max-width">
@@ -16,7 +16,7 @@
             </v-list>
           </v-flex>
         </v-layout>
-        <v-layout v-else row wrap align-center justify-center class="text-xs-center subheading">
+        <v-layout v-else row wrap align-center justify-center class="text-xs-center subheading mb-5">
           <v-flex xs12 class="mb-3"><v-avatar :size="32"><img :src="avatar" alt=""></v-avatar></v-flex>
           <time class="published pr-2 bold" datetime="2015-10-22">{{ date2Str(created_at) }}</time>
           <span class="pl-2 ml-1">{{ author }}</span><img src="images/avatar.jpg" alt="" />
