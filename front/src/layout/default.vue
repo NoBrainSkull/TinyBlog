@@ -8,11 +8,19 @@
         <v-btn flat icon class="mr-2"><v-icon>search</v-icon></v-btn>
       </div>
     </top-bar>
-    <div id="main">
-      <v-content>
-        <slot></slot>
-      </v-content>
-    </div>
+    <title-bloc v-if="isMobile"/>
+    <container>
+      <v-layout row wrap align-start justify-center>
+        <v-flex v-if="isDesktop" md3>
+          <title-bloc/>
+        </v-flex>
+        <v-flex xs12 sm11 md8 offset-xs-1>
+          <v-content>
+            <slot></slot>
+          </v-content>
+        </v-flex>
+      </v-layout>
+    </container>
     <v-footer app>
       <span>&copy; {{ new Date().getUTCFullYear() }}</span>
     </v-footer>
@@ -20,11 +28,13 @@
 </template>
 
 <script>
+	import DeviceAware from '~/mixins/device-aware'
+  import TitleBloc from "~/components/layout/LayoutTitle"
   import TopBar from "~/components/layout/LayoutTopBar"
-  import PostsList from "~/components/layout/LayoutPostList"
 
   export default { 
-    components: { TopBar, PostsList },
+    components: { TopBar, TitleBloc },
+    mixins: [DeviceAware],
     data () {
       return {
         menuItems : ['Lorem', 'Ipsum', 'Feugiat', 'tempus', 'adipiscing']
@@ -48,11 +58,24 @@
 
   .bold { font-weight: bold }
 
+  .display-3 {
+    font-family: 'Raleway', 'sans-serif';
+    font-weight: bold;
+    font-size: 3em!important;
+    letter-spacing: 0.15em!important;
+    text-transform: uppercase;
+  }
+
   .display-1{
     font-family: 'Raleway', 'sans-serif';
     font-weight: bold;
     font-size: 1.5em!important;
     letter-spacing: 0.25em!important;
+  }
+  .headline {
+    letter-spacing: 0.25em!important;
+    font-size: 1em!important;
+    text-transform: uppercase;
   }
 
   .subheading{
