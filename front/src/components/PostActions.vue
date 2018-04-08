@@ -27,13 +27,6 @@
   import DeviceAware from '~/mixins/device-aware'
 
   export default {
-    mixins: [DeviceAware],
-    data() {
-      return {
-        tag: 'general',
-        likes: 28,
-        comments: 52
-      }
-    }
+    mixins: [DeviceAware]
   }
 </script>
