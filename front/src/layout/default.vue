@@ -5,14 +5,16 @@
         <v-btn v-show="isDesktop" v-for="item in menuItems" v-bind:key="item" flat class="slim">{{ item }}</v-btn>
       </div>        
       <div slot="top-bar-actions">
-        <v-btn flat icon class="mr-2"><v-icon>search</v-icon></v-btn>
+        <div class="bl px-1">
+          <v-btn flat icon><v-icon class="grey--text">search</v-icon></v-btn>
+        </div>
       </div>
     </top-bar>
     <title-bloc v-if="isMobile"/>
     <v-container class="px-0 mx-0">
       <v-layout row wrap align-start justify-center>
         <v-flex class="mt-5" v-if="isDesktop" md12></v-flex>
-        <v-flex v-if="isDesktop" md3>
+        <v-flex v-if="isDesktop" md3 offset-md1>
           <v-layout row wrap align-start justify-center>
             <v-flex xs12><title-bloc/></v-flex>
             <v-flex xs11 class="h-separator mt-5"></v-flex>
@@ -23,7 +25,7 @@
             <rights />
           </v-layout>
         </v-flex>
-        <v-flex xs12 sm12 md8 offset-md1>
+        <v-flex xs12 sm12 md7 offset-md1>
           <v-content>
             <slot></slot>
           </v-content>
@@ -73,6 +75,19 @@
 
   .raleway{
     font-family: 'Raleway', 'sans-serif'
+  }
+
+  .br{
+    border-right: solid 1px rgba(160, 160, 160, 0.3);
+  }
+  .bl{
+    border-left: solid 1px rgba(160, 160, 160, 0.3);
+  }
+  .bt{
+    border-top: solid 1px rgba(160, 160, 160, 0.3);
+  }
+  .bb{
+    border-bottom: solid 1px rgba(160, 160, 160, 0.3);
   }
 
   .bold { font-weight: bold }

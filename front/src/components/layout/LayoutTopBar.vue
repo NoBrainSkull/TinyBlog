@@ -7,7 +7,9 @@
       </nav>
       <v-spacer></v-spacer>
       <slot name="top-bar-actions"></slot>
-      <v-btn v-show="isMobile" flat icon @click.stop="rightMenu = !rightMenu"><v-icon>view_headline</v-icon></v-btn>
+      <div class="bl mr-0 px-1">
+        <v-btn v-show="isMobile" flat icon @click.stop="rightMenu = !rightMenu"><v-icon class="grey--text">view_headline</v-icon></v-btn>
+      </div>
     </v-toolbar>
     <right-menu :title="'Future Imperfect'" :open="rightMenu" @close="rightMenu = false" />
   </v-container>
