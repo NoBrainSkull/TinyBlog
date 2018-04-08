@@ -28,13 +28,13 @@
         <post-actions>
           <v-btn slot="leftAction" flat outline large class="button raleway">Continue Reading</v-btn>
           <v-btn small flat class="raleway">{{ tag }}</v-btn>
-          <div class="separator mr-3"></div>
-          <v-btn flat icon color="blue-grey lighten-3" class="stat-btn raleway">
+          <div class="separator"></div>
+          <v-btn flat small color="blue-grey lighten-3" class="stat-btn raleway">
             <v-icon size="12px" class="mr-2">favorite</v-icon>
             <span class="blue-grey--text text--darken-4 mr-3">{{ likes }}</span>
           </v-btn>
-          <div class="separator mr-3"></div>
-          <v-btn flat icon color="blue-grey lighten-3" class="stat-btn raleway">
+          <div class="separator"></div>
+          <v-btn flat small color="blue-grey lighten-3" class="stat-btn raleway">
             <v-icon size="12px" class="mr-2">question_answer</v-icon>
             <span class="blue-grey--text text--darken-4">{{ comments }}</span>
           </v-btn>
