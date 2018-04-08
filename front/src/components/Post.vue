@@ -19,7 +19,9 @@
       <v-card-text>
         <v-container>
           <v-layout row wrap>
-            <img class="mb-5" :src="illustration" />
+            <div style=".image">
+              <img class="mb-5" :src="illustration" />
+            </div>
             <p>{{ text }}</p>
           </v-layout>
         </v-container>

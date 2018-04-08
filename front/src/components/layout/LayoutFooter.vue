@@ -1,13 +1,22 @@
 <template>
   <!-- Footer -->
   <section id="footer">
-    <ul class="icons">
-      <li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
-      <li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
-      <li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
-      <li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
-      <li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>
-    </ul>
-    <p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+    <v-icon small>fa-twitter></v-icon>
+    <v-icon small>fa-facebook></v-icon>
+    <v-icon small>fa-instagram></v-icon>
+    <v-icon small>fa-rss></v-icon>
+    <v-icon small>fa-lock></v-icon>
+    <p class="copyright">&copy; RAVEN. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
   </section>
 </template>
+
+<style scoped>
+.copyright {
+  color: #aaaaaa;
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-size: 0.5em;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+</style>

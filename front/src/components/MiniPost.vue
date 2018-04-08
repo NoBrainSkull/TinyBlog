@@ -3,7 +3,9 @@
     <header>
       <v-card hover flat color="white" class="mini-post mt-5">
         <v-layout row wrap align-center justify-center>
-          <img src="https://cdna.artstation.com/p/assets/images/images/008/221/338/large/nabetse-zitro-v-n.jpg?1511283613" alt="" />
+          <div class="image">
+            <img src="https://loremflickr.com/800/600" alt="" />
+          </div>
           <v-flex xs10 class="mt-3 px-3 py-3">
             <h3 class="title raleway">Rutrum neque accumsan</h3>
             <time class="subheading" datetime="2015-10-19">October 19, 2015</time>
@@ -16,13 +18,17 @@
 </template>
 
 <style scoped>
-  .title {
-    text-transform: uppercase;
-    font-family: 'Raleway';
-    font-size: 1em!important;
-  }
-
   .mini-post {
     border: solid 1px rgba(160, 160, 160, 0.5)!important;
   }
+
+  .image {
+    height: 15em;
+  }
 </style>
+
+<script>
+  export default {
+    
+  }
+</script>
