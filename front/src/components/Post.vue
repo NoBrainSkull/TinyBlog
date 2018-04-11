@@ -6,8 +6,8 @@
           <v-flex xs12 md9>
             <v-container class="titlebox my-0 px-5 pt-5 text-xs-center text-md-left">
               <v-layout row wrap>
-                <v-flex xs12><h2 class="display-1">{{ title }}</h2></v-flex>
-                <v-flex xs12><p class="subheading mt-4">{{ subtitle }}</p></v-flex>
+                <v-flex xs12><h2 class="display-1">{{ post.title }}</h2></v-flex>
+                <v-flex xs12><p class="subheading mt-4">{{ post.subtitle }}</p></v-flex>
               </v-layout>
             </v-container>
           </v-flex>
@@ -20,25 +20,25 @@
         <v-container>
           <v-layout row wrap>
             <div style=".image">
-              <img class="mb-5" :src="illustration" />
+              <img class="mb-5" :src="post.illustration" />
             </div>
-            <p class="body-2">{{ text }}</p>
+            <p class="body-2">{{ post.text }}</p>
           </v-layout>
         </v-container>
       </v-card-text>
       <v-card-actions class="actions mb-5">
         <post-actions>
           <v-btn slot="leftAction" flat outline large class="big-button raleway mb-3">Continue Reading</v-btn>
-          <v-btn small flat class="raleway">{{ tag }}</v-btn>
+          <v-btn small flat class="raleway">{{ post.tag }}</v-btn>
           <div class="v-separator"></div>
           <v-btn flat small color="blue-grey lighten-3" class="stat-btn raleway">
             <v-icon size="12px" class="mr-2">favorite</v-icon>
-            <span class="blue-grey--text text--darken-4">{{ likes }}</span>
+            <span class="blue-grey--text text--darken-4">{{ post.likes }}</span>
           </v-btn>
           <div class="v-separator"></div>
           <v-btn flat small color="blue-grey lighten-3" class="stat-btn raleway">
             <v-icon size="12px" class="mr-2">question_answer</v-icon>
-            <span class="blue-grey--text text--darken-4">{{ comments }}</span>
+            <span class="blue-grey--text text--darken-4">{{ post.comments }}</span>
           </v-btn>
         </post-actions>
       </v-card-actions>
@@ -47,28 +47,14 @@
 </template>
 
 <script>
-  import calendar from '~/modules/dateUtils'
   import PostDate from '~/components/PostDate'
   import PostActions from '~/components/PostActions'
 
   export default {
-    data() {
-      return {
-        title: 'Euismod et accumsan',
-        subtitle: 'Lorem ipsum dolor amet nullam consequat etiam feugiat',
-        created_at: new Date(),
-        author: 'Blue Raven',
-        text: 'Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Cras vehicula tellus eu ligula viverra, ac fringilla turpis suscipit. Quisque vestibulum rhoncus ligula.',
-        tag: 'general',
-        likes: 28,
-        comments: 52,
-        illustration: 'https://cdna.artstation.com/p/assets/images/images/008/221/338/large/nabetse-zitro-v-n.jpg?1511283613'
-      }
-    },
-    methods: {
-      date2Str: datetime => {
-        const date = calendar(datetime)
-        return `${date.monthName} ${date.day}, ${date.year}`
+    props: {
+      post: {
+        type: Object,
+        required: true
       }
     },
     components: { PostDate, PostActions }
