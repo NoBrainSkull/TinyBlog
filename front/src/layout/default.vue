@@ -31,6 +31,14 @@
           </v-content>
           <bottom-actions />
         </v-flex>
+        <v-layout row wrap align-start justify-center v-if="isMobile">
+          <v-flex xs11 class="h-separator my-5"></v-flex>
+          <v-flex xs11><recommendations /></v-flex>
+          <v-flex xs11 class="h-separator my-5"></v-flex>
+          <v-flex xs11><about /></v-flex>
+          <v-flex xs11 class="h-separator my-5"></v-flex>
+          <v-flex xs11><rights /></v-flex>
+        </v-layout>
       </v-layout>
     </v-container>
     <v-footer app>
@@ -54,14 +62,6 @@
     data () {
       return {
         menuItems : ['Lorem', 'Ipsum', 'Feugiat', 'tempus', 'adipiscing']
-      }
-    },
-    computed: {
-      isMobile() {
-        return ['xs', 'sm'].includes(this.$vuetify.breakpoint.name)
-      },
-      isDesktop() {
-        return !(this.isMobile)
       }
     }
   }
