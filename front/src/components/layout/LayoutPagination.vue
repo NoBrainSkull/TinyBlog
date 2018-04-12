@@ -11,10 +11,14 @@
 import DeviceAware from '~/mixins/device-aware'
   export default {
     mixins: [DeviceAware],
-    data () {
-      return {
-        pageNumber: 0,
-        maxPage: 0
+    props: {
+      pageNumber: {
+        type: Number,
+        default: 0
+      },
+      maxPage: {
+        type: Number,
+        default: 0
       }
     }
   }
