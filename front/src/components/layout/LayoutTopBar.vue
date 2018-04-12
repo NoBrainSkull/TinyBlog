@@ -1,9 +1,11 @@
 <template>
   <v-container>
     <v-toolbar class="topbar" app flat>
-      <h1 class="body-1" @click.stop="$emit('HomeAction')">{{ title }}</h1>
+      <h1 class="body-1 hand" @click.stop="$emit('HomeAction')">{{ title }}</h1>
       <nav class="links pt-2">
-        <slot name="top-bar-menu"></slot>
+        <slot name="top-bar-menu">
+          <v-btn v-show="isDesktop" v-for="item in items" v-bind:key="item.title" flat class="slim">{{ item.title }}</v-btn>
+        </slot>
       </nav>
       <v-spacer></v-spacer>
       <slot name="top-bar-actions"></slot>
@@ -11,7 +13,9 @@
         <v-btn v-show="isMobile" flat icon @click.stop="rightMenu = !rightMenu"><v-icon class="grey--text">view_headline</v-icon></v-btn>
       </div>
     </v-toolbar>
-    <right-menu :title="'Future Imperfect'" :open="rightMenu" @close="rightMenu = false" />
+    <slot name="mobile-menu">
+      <right-menu :title="'Future Imperfect'" :items="items" :open="rightMenu" @close="rightMenu = false" />
+    </slot>
   </v-container>
 </template>
 
@@ -31,17 +35,13 @@
         type: String,
         default: 'Define me!'
       },
+      items: {
+        type: Array,
+        required: true
+      },
       enableRightPanel: {
         type: Boolean,
         default: true
-      }
-    },
-    methods: {
-      defaultSearchCTA() {
-        this.$emit('search-btn-clicked')
-      },
-      defaultMenuCTA() {
-        //open menu as a right side panel
       }
     },
     components: { RightMenu }

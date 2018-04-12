@@ -1,9 +1,6 @@
 <template>
   <v-container id="header" class="px-0 mx-0">
-    <top-bar :title="'Future Imperfect'">
-      <div slot="top-bar-menu">
-        <v-btn v-show="isDesktop" v-for="item in menuItems" v-bind:key="item" flat class="slim">{{ item }}</v-btn>
-      </div>        
+    <top-bar :title="'Future Imperfect'" :items="menuItems">
       <div slot="top-bar-actions">
         <div class="bl px-1">
           <v-btn flat icon><v-icon class="grey--text">search</v-icon></v-btn>
@@ -55,15 +52,12 @@
   import Recommendations from "~/components/layout/LayoutRecommendations"
   import Rights from "~/components/layout/LayoutRights"
   import Pagination from "~/components/layout/LayoutPagination"
+  import menuItems from '#/json/menu'
 
   export default { 
     components: { TopBar, TitleBloc, Recommendations, About, Rights, Pagination },
     mixins: [DeviceAware],
-    data () {
-      return {
-        menuItems : ['Lorem', 'Ipsum', 'Feugiat', 'tempus', 'adipiscing']
-      }
-    }
+    data: () => ({ menuItems })
   }
 </script>
 
@@ -89,6 +83,8 @@
   .bb{
     border-bottom: solid 1px rgba(160, 160, 160, 0.3);
   }
+
+  .hand { cursor: pointer }
 
   .bold { font-weight: bold }
 
