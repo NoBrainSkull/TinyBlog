@@ -1,10 +1,10 @@
 <template>
   <section>
     <v-layout v-if="isDesktop" row wrap>
-      <mini-post v-for="post in posts" v-bind:key="post.title" :post="post" :avatar="user.avatar"/>
+      <mini-post v-for="post in posts" v-bind:key="post.id" :post="post" :avatar="user.avatar"/>
     </v-layout>
     <v-layout v-else row wrap class="py-3">
-      <v-flex xs6 v-for="post in posts" v-bind:key="post.title" class="px-3 my-3 py-0">
+      <v-flex xs6 v-for="post in posts" v-bind:key="post.id" class="px-3 my-3 py-0">
         <mini-post :post="post" :avatar="user.avatar" class="my-0 py-0"/>
       </v-flex>
     </v-layout>

@@ -8,7 +8,7 @@
           </div>
           <v-flex xs10 class="mt-3 px-3 py-3">
             <h3 class="title raleway">{{ post.title }}</h3>
-            <time class="subheading" :datetime="post.createdAt">{{ date2Str(post.created_at) }}</time>
+            <time class="subheading" :datetime="post.createdAt">{{ date2Str(post.createdAt) }}</time>
           </v-flex>
           <v-flex xs2><v-avatar :size="40"><img :src="avatar" alt="" /></v-avatar></v-flex>
         </v-layout>
