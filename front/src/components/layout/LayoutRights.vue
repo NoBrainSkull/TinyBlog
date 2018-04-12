@@ -1,5 +1,4 @@
 <template>
-  <!-- Footer -->
   <section id="footer">
     <v-icon small>fa-twitter></v-icon>
     <v-icon small>fa-facebook></v-icon>
