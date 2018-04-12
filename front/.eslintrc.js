@@ -1,29 +1,26 @@
-// https://eslint.org/docs/user-guide/configuring
-
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
   parserOptions: {
-    sourceType: 'module'
+    "parser": "babel-eslint",
+    "ecmaVersion": 2017,
+    "sourceType": "module"
   },
   env: {
     browser: true,
+    node: true
   },
-  extends: 'prettier',
+  extends: ['prettier-standard', 'plugin:vue/essential'],
   // required to lint *.vue files
   plugins: [
-    'html'
+    'vue'
   ],
-  // check if imports actually resolve
-  settings: {
-    'import/resolver': {
-      webpack: {
-        config: 'build/webpack.base.conf.js'
-      }
-    }
-  },
   // add your custom rules here
   rules: {
+    // don't require .vue extension when importing
+    'import/extensions': ['error', 'always', {
+      js: 'never',
+      vue: 'never'
+    }],
     // disallow reassignment of function parameters
     // disallow parameter object manipulation except for specific exclusions
     'no-param-reassign': ['error', {
@@ -35,6 +32,10 @@ module.exports = {
       ]
     }],
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
-  }
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    // ignore max length
+    'max-len': 0,
+    "import/extensions": ["error", "never", { "packages": "always" }]
+  },
+  globals: {}
 }
