@@ -29,7 +29,7 @@
           <v-content>
             <slot></slot>
           </v-content>
-          <bottom-actions />
+          <pagination />
         </v-flex>
         <v-layout row wrap align-start justify-center v-if="isMobile">
           <v-flex xs11 class="h-separator my-5"></v-flex>
@@ -52,12 +52,12 @@
   import TitleBloc from "~/components/layout/LayoutTitle"
   import TopBar from "~/components/layout/LayoutTopBar"
   import About from "~/components/layout/LayoutAbout"
-  import Recommendations from "~/components/layout/LayoutRecommendedPosts"
-  import Rights from "~/components/layout/LayoutFooter"
-  import BottomActions from "~/components/layout/LayoutBottomActions"
+  import Recommendations from "~/components/layout/LayoutRecommendations"
+  import Rights from "~/components/layout/LayoutRights"
+  import Pagination from "~/components/layout/LayoutPagination"
 
   export default { 
-    components: { TopBar, TitleBloc, Recommendations, About, Rights, BottomActions },
+    components: { TopBar, TitleBloc, Recommendations, About, Rights, Pagination },
     mixins: [DeviceAware],
     data () {
       return {
