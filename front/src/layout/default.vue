@@ -15,7 +15,7 @@
           <v-layout row wrap align-start justify-center>
             <v-flex xs12><title-bloc/></v-flex>
             <v-flex xs11 class="h-separator mt-5"></v-flex>
-            <v-flex xs12><recommendations /></v-flex>     
+            <v-flex xs12><recommendations :posts="recommendedPosts" :user="user"/></v-flex>     
             <v-flex xs11 class="h-separator my-5"></v-flex>
             <about />
             <v-flex xs11 class="h-separator my-5"></v-flex>
@@ -57,7 +57,61 @@
   export default { 
     components: { TopBar, TitleBloc, Recommendations, About, Rights, Pagination },
     mixins: [DeviceAware],
-    data: () => ({ menuItems })
+    data: () => ({ menuItems, user: {avatar: 'https://png.pngtree.com/element_origin_min_pic/16/09/03/1257ca4f59e27e8.jpg'} }),
+    computed: {
+      recommendedPosts () {
+        return [
+          {
+            id: 1,
+            title: 'Euismod et accumsan',
+            subtitle: 'Lorem ipsum dolor amet nullam consequat etiam feugiat',
+            createdAt: new Date(),
+            author: 'Blue Raven',
+            text: 'Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Cras vehicula tellus eu ligula viverra, ac fringilla turpis suscipit. Quisque vestibulum rhoncus ligula.',
+            tag: 'general',
+            likes: 28,
+            comments: 52,
+            illustration: 'https://cdna.artstation.com/p/assets/images/images/008/221/338/large/nabetse-zitro-v-n.jpg?1511283613'
+          },
+          {
+            id: 2,
+            title: 'Euismod et accumsan',
+            subtitle: 'Lorem ipsum dolor amet nullam consequat etiam feugiat',
+            createdAt: new Date(),
+            author: 'Blue Raven',
+            text: 'Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Cras vehicula tellus eu ligula viverra, ac fringilla turpis suscipit. Quisque vestibulum rhoncus ligula.',
+            tag: 'general',
+            likes: 28,
+            comments: 52,
+            illustration: 'https://cdna.artstation.com/p/assets/images/images/008/221/338/large/nabetse-zitro-v-n.jpg?1511283613'
+          },
+          {
+            id: 3,
+            title: 'Euismod et accumsan',
+            subtitle: 'Lorem ipsum dolor amet nullam consequat etiam feugiat',
+            createdAt: new Date(),
+            author: 'Blue Raven',
+            text: 'Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Cras vehicula tellus eu ligula viverra, ac fringilla turpis suscipit. Quisque vestibulum rhoncus ligula.',
+            tag: 'general',
+            likes: 28,
+            comments: 52,
+            illustration: 'https://cdna.artstation.com/p/assets/images/images/008/221/338/large/nabetse-zitro-v-n.jpg?1511283613'
+          },
+          {
+            id: 4,
+            title: 'Euismod et accumsan',
+            subtitle: 'Lorem ipsum dolor amet nullam consequat etiam feugiat',
+            createdAt: new Date(),
+            author: 'Blue Raven',
+            text: 'Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Cras vehicula tellus eu ligula viverra, ac fringilla turpis suscipit. Quisque vestibulum rhoncus ligula.',
+            tag: 'general',
+            likes: 28,
+            comments: 52,
+            illustration: 'https://cdna.artstation.com/p/assets/images/images/008/221/338/large/nabetse-zitro-v-n.jpg?1511283613'
+          }
+        ]
+      }
+    }
   }
 </script>
 
