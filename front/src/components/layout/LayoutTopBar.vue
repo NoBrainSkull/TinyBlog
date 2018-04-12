@@ -17,7 +17,10 @@
 
 <script>
   import RightMenu from './LayoutRightMenu'
+  import DeviceAware from '~/mixins/device-aware'
+
   export default {
+    mixins: [DeviceAware],
     data() {
       return {
         rightMenu: false
@@ -32,11 +35,6 @@
         type: Boolean,
         default: true
       }
-    },
-    computed: {
-      isMobile() {
-        return ['xs', 'sm'].includes(this.$vuetify.breakpoint.name)
-      },
     },
     methods: {
       defaultSearchCTA() {
